@@ -1,21 +1,23 @@
-*{
-    box-sizing: border-box;
-}
-.row::after{
-    content: "";
-    clear: both;
-    display: block;
+
+* {
+  box-sizing: border-box;
 }
 
-[class*="col-"]{
-    float: left;
-    padding: 15px;
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
-/*for pc: */
-.col-1 {width: 33.33%}
-.col-2 {width: 66.67%}
-.col-3{width: 100%}
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+.col-1 {width: 30%; border: 3px solid black;}
+.col-2 {width: 70%;}
+.col-3 {width: 50%;}
+.col-4{width: 50%; text-align: center;}
 
 .Ball{
     height: 400px;
@@ -28,49 +30,51 @@
     nudge 2s linear infinite;
 }
 
-.item1{
-    padding: 20px;
-    border: 1px solid black;
-
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
 }
 
-.item2{
-    background-color: lightseagreen;
-    padding: 20px;
-    border: 1px solid black;
-    float: left;
-    width: 25%;
-
+.fa:hover {
+    opacity: 0.7;
 }
 
-.item3{
-    background-color: cornsilk;
-    padding: 20px;
-    border: 1px solid black;
-    float: left;
-    width: 75%;
+.fa-facebook {
+  background: #3B5998;
+  color: white;
 }
 
 
-body{
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+
+html {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: lightblue;
-}
-
-h1, p, a{
-    text-align: center;
-    font-family: ptSans;
-}
-
-h2{
-
+    background-color: white;
+  font-family: ptSans;
 }
 
 @font-face {
-    font-family: ptSans;
-    src: url("/PT_Sans/PTSans-Regular.ttf");
+  font-family: ptSans;
+    src: url("/PT_Sans/PTSans-Italic.ttf");
+}
+
+.image {
+    width:100%;
+    height:auto;
+}
+
+.header {
+  padding: 15px;
 }
 
 @keyframes pulse {
@@ -92,14 +96,14 @@ h2{
         transform: translate(0,0);
     }
     50%{
-        transform: translate(100px,0px);
+        transform: translate(200px,0px);
     }
-    80%{
-        transform: translate(-100px,0px);
+    70%{
+        transform: translate(300px,0px);
     }
 }
 
-@media only screen and (max-width: 4000px) {
+@media only screen and (max-width: 1000px) {
     [class*="col-"]{
         width: 100%;
     }
@@ -107,4 +111,8 @@ h2{
         background-color: red;
     }
 
+}
+
+#div1 {
+  font-size:48px;
 }

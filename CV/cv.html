@@ -1,27 +1,96 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/html">
     <head>
+
         <link rel="stylesheet"  href="cv.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="cv.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Tomer CV's</title>
+
+        <title>Tomer Online CV's</title>
     </head>
+
     <body>
+
+
+        <div class="header">
+
+                <div class="col-1">
+                     <img class="image" src="tomer.jpeg" alt="Sketch" width="350" height="350"><br>
+                </div>
+
+                <div class="col-2 Ball">
+                    <h1>TOMER VARDI</h1><br>
+                    <h2>Interactive CV</h2>
+                    <h3>Contact me:</h3>
+                </div>
+
+        </div>
+
         <div class="row">
 
-            <div class="Ball">
-                <h1>Hello!</h1><br><br><br>
-                <h2>click_here_for_more_information</h2>
+            <div class="col-3">
+                                    <div id="div1" class="fa"></div>
+                      <a href="https://www.facebook.com/tomerv/" class="fa fa-facebook"></a>
+                    <a href="https://www.linkedin.com/in/tomer-vardi/" class="fa fa-linkedin"></a>
+
+                <button type="submit" onClick="refreshPage()">Refresh Button</button>
+
+                <h2>If you have any thoughts, fill free to send me here </h2>
+                <form>
+                    <label for="fname">First Name:</label><br>
+                    <input type="text" id="fname" name="fname"><br>
+                    <label for="lname">Last Name:</label><br>
+                    <input type="text" id="lname" name="lname"><br>
+                      <label for="email">Email:</label><br>
+                    <input type="email" id="email" email="email"><br>
+                    <label for="comment">Comment:</label><br>
+                    <textarea id="comment" cols="50" rows="5"></textarea><br><br>
+                    <input type="submit" value="Submit">
+                </form>
             </div>
 
-             <div class="col-3 item1">
-                 <img src="CV1.png" alt="Sketch"> <br>
-             </div>
-        </div>
-        <div class="row">
-        <div class="col-1 item2">this is the contact me area</div>
-        <div class="col-2 item3">contact me icons area</div>
-        </div>
+            <div class="col-4">
+                <h1>WORK EXPERIENCE</h1>
+                    <h2>IEOD, Caesarea - Demining expert</h2>
+                        <p>
+                            <h3> September 2012 - PRESENT</h3>
+                                Preparation working manager. <br>
+                                Coordinating & updating daily work and progress for future goals.<br>
+                                Working under pressure & difficult physical work. conditions, while standing up to the company's requirements.
+                        </p>
+
+                    <h2> Rashut-Habeduim, Beer-Sheva </h2>
+                        <p>
+                            <h3>October 2018 - 2019</h3>
+
+                            Student position at the Hasdara department.<br>
+                            Surveillance management, reports making and other Excel works.<br>
+                            Creating, extracting & correcting reports and customer files from the CRM's organization named SHITA.<br>
+                            Modification of CRM modules with the IS organization charge.
+                </p>
+                <h2>Utilight, Yavne</h2>
+                            <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+
+                <p>
+                <h3>August 2015 - April 2016</h3>
+                    Machine process testing & error correcting.<br>
+                    Product quality assurance.
+                </p>
+
+
+                <h1>EDUCATION</h1>
+                <p>
+                      
+                </p>
+
+            </div>
+
         </div>
 
+
+
     </body>
+
 </html>
