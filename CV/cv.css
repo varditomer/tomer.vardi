@@ -63,10 +63,10 @@ html {
   font-family: ptSans;
 }
 
-@font-face {
-  font-family: ptSans;
-    src: url("/PT_Sans/PTSans-Italic.ttf");
-}
+/*@font-face {*/
+/*  font-family: ptSans;*/
+/*    src: url("/CV/PT_Sans/PTSans-Italic.ttf");*/
+/*}*/
 
 .image {
     width:100%;
