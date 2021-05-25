@@ -1,0 +1,12 @@
+<header>
+    <div class="header">
+        <div>
+            <h1>Welcome to my CV website, {{ curr_user.firstname | default('Stranger', true) | lower }} {{ curr_user.lastname | upper}}!</h1>
+            <h2>You are in {{ page }}! </h2>
+        </div>
+        <hr>
+
+
+
+    </div>
+</header>
