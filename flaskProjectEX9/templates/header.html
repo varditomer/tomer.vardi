@@ -1,0 +1,17 @@
+<header>
+    <div class="header">
+        <div>
+            {% if session['nickname']  %}
+            <h1>Welcome to my CV website, {{ session['nickname'] }}!</h1>
+            {% else %}
+            <h1>Welcome to my CV website, stranger!</h1>
+            {% endif %}
+
+            <h2>You are in {{ page }}! </h2>
+        </div>
+        <hr>
+
+
+
+    </div>
+</header>
