@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet"  href="{{url_for('static', filename='cv.css')}}">
+    <link rel="stylesheet" href="{{ url_for('awesome')}}">
+    <script src="{{url_for('static', filename='cv.js')}}"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment 8</title>
+</head>
+<body>
+{% set page ="Hobbies Page" %}
+{% include('header.html') %}
+<button class="btn" onClick="refreshPage()"> Refresh Button </button>
+<div class="col">
+<ul>
+    {% for hobby in hobbies %}
+    <li>{{ hobby }}</li>
+    {% endfor %}
+</ul>
+    <h1>Hobbies</h1>
+    <h2>Surf</h2>
+    <p>
+    <h3> Photo of me while surfing</h3>
+
+    </p>
+    {% if curr_user.firstname == 'TomEr' %}
+        <h1> Hello {{ curr_user.firstname | upper }} {{ curr_user.lastname | upper}}!</h1>
+    {% else %}
+        <h1> Hello Stranger!</h1>
+    {% endif %}
+
+<h3><a href="{{ url_for('customers') }}">Click here to view customers page</a></h3>
+
+
+</div>
+
+
+</body>
+</html>

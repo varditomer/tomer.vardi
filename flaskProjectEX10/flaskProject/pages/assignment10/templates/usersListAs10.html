@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {#    <link rel="stylesheet"  href="{{url_for('static', filename='cv.css')}}">#}
+    {#    <script src="{{url_for('static', filename='cv.js')}}"></script>#}
+
+    <title>users List</title>
+</head>
+<body>
+{% for user in users %}
+    <li>your user id is:{{ user.id }}</li>
+    <li>your first name is:{{ user.first_name | upper}}, & your last name is:{{ user.last_name | upper}}</li>
+    <li>your email is:{{ user.email}}</li>
+{% endfor %}
+<main>
+    sdg
+</main>
+</body>
+</html>
