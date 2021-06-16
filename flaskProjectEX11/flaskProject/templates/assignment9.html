@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'cv.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="{{ url_for('static', filename = 'cv.js') }}"></script>
+
+</head>
+<body>
+<h1>Search Form</h1>
+<form method="GET" , action="/search">
+    <input name="searchinput" type="text" placeholder="Enter Search Here">
+    <input type="submit">
+</form>
+{% if searchfound %}
+    <img src="{{ searchfound.avatar }}" alt="Profile_Avatar"/>
+    <h3>{{ searchfound.first_name }} {{ searchfound.last_name }}</h3>
+    <h3>email: {{ searchfound.email }} </h3>
+{% elif search %}
+    {% for user in search %}
+        <img src="{{ user.avatar }}" alt="Profile_Avatar"/>
+        <h3>{{ user.first_name }} {{ user.last_name }}</h3>
+        <h3>email: {{ user.email }} </h3>
+    {% endfor %}
+{% elif notfound %}
+    <h1>{{ notfound }}</h1>
+{% endif %}
+
+{% if session['username'] %}
+    <h2>Welcome {{ session['nickname'] }}</h2>
+    <a href = "/logout">Log out</a><br>
+{% else %}
+    <h1>Registration Form</h1>
+    <form method="POST" , action="/register">
+        <input name="username" type="text" placeholder="Enter User Name Here" required>
+        <input name="password" type="password" placeholder="Enter Password Here" required>
+        <input name="email" type="email" placeholder="Enter Email Here" required>
+        <input name="nickname" type="text" placeholder="Enter Nickname Here" required>
+        <input type="submit">
+    </form>
+{% endif %}
+</body>
+</html>
